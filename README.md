@@ -36,6 +36,19 @@ edite fixtures/sites.json
 +	<a class="navbar-brand" href="{% url "home" %}">settings</a>
 +	<a class="navbar-brand" href="{% url "home" %}">help</a>
 +{% endblock %}
+
+设置邮箱验证<project name>/settings.py
+-ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = False
++ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
+
+-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
++EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
++EMAIL_USE_TLS = True
++EMAIL_HOST = "smtp.qq.com"
++EMAIL_PORT =  587
++EMAIL_HOST_USER = "xxx@qq.com"
++EMAIL_HOST_PASSWORD = "pppppp"
++DEFAULT_FROM_EMAIL = "xxx@qq.com"
 ```
 
 
