@@ -11,7 +11,7 @@ user accounts.
 Usage:
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project-account/zipball/master <project_name>
+django-admin.py startproject --template=https://github.com/crazyleen/pinax-project-account/zipball/master <project_name>
 ```
 
 Customization:
