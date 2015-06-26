@@ -11,6 +11,13 @@
     {% block extra_style %}{% endblock %}
 {% endblock %}
 
+{% block site_brand %}
+	<a class="navbar-brand" href="{% url "home" %}">home</a>
+	<a class="navbar-brand" href="{% url "home" %}">news</a>
+	<a class="navbar-brand" href="{% url "home" %}">files</a>
+	<a class="navbar-brand" href="{% url "home" %}">settings</a>
+	<a class="navbar-brand" href="{% url "home" %}">help</a>
+{% endblock %}
 
 {% block extra_head_base %}
     {% block extra_head %}{% endblock %}

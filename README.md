@@ -14,6 +14,31 @@ Usage:
 django-admin.py startproject --template=https://github.com/pinax/pinax-project-account/zipball/master <project_name>
 ```
 
+Customization:
+
+
+```
+修改域名
+edite fixtures/sites.json
+
+设置联系邮箱 <project name>/settings.py
++THEME_CONTACT_EMAIL = "ruishenglin@126.com"
+
+页尾信息<project name>/templates/_footer.html
+-{% trans "&copy; 2015 &lt;your company here&gt;" %}
++{% trans "&copy; 2015 广州市香港科大霍英东研究院 物联网研发部" %}
+
+导航栏<project name>/templates/site_base.html
++{% block site_brand %}
++	<a class="navbar-brand" href="{% url "home" %}">home</a>
++	<a class="navbar-brand" href="{% url "home" %}">news</a>
++	<a class="navbar-brand" href="{% url "home" %}">files</a>
++	<a class="navbar-brand" href="{% url "home" %}">settings</a>
++	<a class="navbar-brand" href="{% url "home" %}">help</a>
++{% endblock %}
+```
+
+
 Getting Started:
 
 ```
